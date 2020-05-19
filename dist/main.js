@@ -8,26 +8,26 @@
         return module.exports;
     }
 
-    require('8935717b-8e62-4fae-a29a-f6930432d73c');
+    require('43feaff4-5b20-4734-ba4f-629f8a214b9a');
 })({
     /*./example/index.js*/
-    '8935717b-8e62-4fae-a29a-f6930432d73c': function (
+    '43feaff4-5b20-4734-ba4f-629f8a214b9a': function (
         require,
         module,
         exports
     ) {
         'use strict';
 
-        var _c1819Fb4f40eb92b89e04edd8fd = _interopRequireDefault(
-            require('645c1819-fb4f-40eb-92b8-9e04edd8fd54')
+        var _c146d494d040de8676B1ecaa173d = _interopRequireDefault(
+            require('48c146d4-94d0-40de-8676-b1ecaa173d19')
         );
 
-        var _cf0778D1fd466a8b8303642333f3c = _interopRequireDefault(
-            require('68cf0778-d1fd-466a-8b83-03642333f3c3')
+        var _f999188837964a458c1bC6a3e06c2c4e = _interopRequireDefault(
+            require('f9991888-3796-4a45-8c1b-c6a3e06c2c4e')
         );
 
-        var _c4ec50a23784b75A6e3E437709dfebb = _interopRequireDefault(
-            require('6c4ec50a-2378-4b75-a6e3-e437709dfebb')
+        var _b0f5dea8ea04db4A920Bd7809b582fa = _interopRequireDefault(
+            require('0b0f5dea-8ea0-4db4-a920-bd7809b582fa')
         );
 
         function _interopRequireDefault(obj) {
@@ -35,17 +35,17 @@
         }
 
         console.log(
-            (0, _c1819Fb4f40eb92b89e04edd8fd['default'])('webpack-lite')
+            (0, _c146d494d040de8676B1ecaa173d['default'])('webpack-lite')
         );
         console.log(
-            (0, _cf0778D1fd466a8b8303642333f3c['default'])('webpack-lite')
+            (0, _f999188837964a458c1bC6a3e06c2c4e['default'])('webpack-lite')
         );
         console.log(
-            (0, _c4ec50a23784b75A6e3E437709dfebb['default'])('webpack-lite')
+            (0, _b0f5dea8ea04db4A920Bd7809b582fa['default'])('webpack-lite')
         );
     },
     /*./a.js*/
-    '645c1819-fb4f-40eb-92b8-9e04edd8fd54': function (
+    '48c146d4-94d0-40de-8676-b1ecaa173d19': function (
         require,
         module,
         exports
@@ -57,12 +57,12 @@
         });
         exports['default'] = a;
 
-        var _b01e602c8a4cfaB7da325bbdd = _interopRequireDefault(
-            require('01b01e60-2c8a-4cfa-b7da-325bbdd00064')
+        var _c2d91a3e26c6473aB80bCfca9e8b4cb = _interopRequireDefault(
+            require('c2d91a3e-26c6-473a-b80b-cfca9e8b4cb1')
         );
 
-        var _f110de655aa41cc842c3dcc3e9160d = _interopRequireDefault(
-            require('1f110de6-55aa-41cc-842c-3dcc3e9160d6')
+        var _a68784e98f94196A9b75bbf9d05a0ce = _interopRequireDefault(
+            require('4a68784e-98f9-4196-a9b7-5bbf9d05a0ce')
         );
 
         function _interopRequireDefault(obj) {
@@ -71,15 +71,18 @@
 
         function a(name) {
             return ''
-                .concat((0, _b01e602c8a4cfaB7da325bbdd['default'])(name), ' ')
                 .concat(
-                    (0, _f110de655aa41cc842c3dcc3e9160d['default'])(name),
+                    (0, _c2d91a3e26c6473aB80bCfca9e8b4cb['default'])(name),
+                    ' '
+                )
+                .concat(
+                    (0, _a68784e98f94196A9b75bbf9d05a0ce['default'])(name),
                     ' - a'
                 );
         }
     },
     /*./b.js*/
-    '01b01e60-2c8a-4cfa-b7da-325bbdd00064': function (
+    'c2d91a3e-26c6-473a-b80b-cfca9e8b4cb1': function (
         require,
         module,
         exports
@@ -96,7 +99,7 @@
         }
     },
     /*./d.js*/
-    '1f110de6-55aa-41cc-842c-3dcc3e9160d6': function (
+    '4a68784e-98f9-4196-a9b7-5bbf9d05a0ce': function (
         require,
         module,
         exports
@@ -113,7 +116,7 @@
         }
     },
     /*./c.js*/
-    '68cf0778-d1fd-466a-8b83-03642333f3c3': function (
+    'f9991888-3796-4a45-8c1b-c6a3e06c2c4e': function (
         require,
         module,
         exports
@@ -130,7 +133,7 @@
         }
     },
     /*./e.js*/
-    '6c4ec50a-2378-4b75-a6e3-e437709dfebb': function (
+    '0b0f5dea-8ea0-4db4-a920-bd7809b582fa': function (
         require,
         module,
         exports

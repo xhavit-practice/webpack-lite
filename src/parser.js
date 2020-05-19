@@ -9,6 +9,7 @@ const { getFilenameInfo } = require('./util');
 /**
  * 将absoluteFilename对应的文件转换成ast对象
  * @param {String} absoluteFilename
+ * @return {Object} AST Object
  */
 function getAST(absoluteFilename) {
     const source = readFileSync(absoluteFilename, 'utf-8');
@@ -20,8 +21,9 @@ function getAST(absoluteFilename) {
 }
 
 /**
- * 根据ast解析该模块的依赖
- * @param {Object} ast ast对象
+ * 根据当前模块的ast和绝对路径，获取当前模块的依赖
+ * @param {Object} ast 当前模块对应的ast对象
+ * @param {String} absoluteFilename 当前模块对应的绝对路径
  */
 function getDependencies(ast, absoluteFilename) {
     const dependencies = [];
@@ -38,9 +40,10 @@ function getDependencies(ast, absoluteFilename) {
 }
 
 /**
- * 修改ast的依赖路径为对应的索引值
- * @param {Object} ast ast对象
- * @param {Number} moduleIndex 该模块在整个模块依赖树中的索引值
+ * 修改当前模块ast树上的模块声明语句的路径
+ * @param {Object} ast 当前模块对应的ast
+ * @param {Array} dependencies 当前模块对应的依赖
+ * @param {Object} modulesMap 当前entry相关的所有模块
  */
 function updateAstDependencies(ast, dependencies, modulesMap) {
     traverse(ast, {
@@ -66,6 +69,7 @@ function updateAstDependencies(ast, dependencies, modulesMap) {
 /**
  * 将ast转换成源码
  * @param {Object} ast
+ * @return {String} 转换后的代码
  */
 function transform(ast) {
     const { code } = transformFromAst(ast, null, {
@@ -78,7 +82,7 @@ function transform(ast) {
 /**
  * 用pritter格式化代码
  * @param {String} code 需要被格式化的代码
- * @returns {Promise<String>} 格式化后的代码
+ * @return {Promise<String>} 格式化后的代码
  */
 function formatCode(code) {
     return prettier

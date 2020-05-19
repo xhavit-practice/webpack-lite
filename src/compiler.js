@@ -20,6 +20,9 @@ module.exports = class Compiler {
         this.modulesMap = {};
     }
 
+    /**
+     * 开始运行构建
+     */
     run() {
         this.buildModules();
         this.emitFiles();
@@ -28,6 +31,9 @@ module.exports = class Compiler {
         // console.log(this.modulesMap);
     }
 
+    /**
+     * 构建模块对象，并生成编译后的代码
+     */
     buildModules() {
         this.genModules(this.entry, path.join(process.cwd(), 'index.js'));
 
@@ -37,6 +43,11 @@ module.exports = class Compiler {
         });
     }
 
+    /**
+     * 从入口文件开始，生成所有module对象并添加到this.modules
+     * @param {String} filename 要生成module的路径
+     * @param {*} dependentFilename 要生成module被依赖的路径
+     */
     genModules(filename, dependentFilename) {
         const module = this.genModule(filename, dependentFilename);
 
@@ -50,13 +61,17 @@ module.exports = class Compiler {
         }
     }
 
+    /**
+     * 生成单个的module对象
+     * @param {String} filename 要生成module的路径
+     * @param {*} dependentFilename 要生成module被依赖的路径
+     * @return {Object<originalFilename, filename, absoluteFilename, isNpmModule, index, id, ast, dependencies>}
+     */
     genModule(filename, dependentFilename) {
         const filenameInfo = getFilenameInfo(filename, dependentFilename);
         const { absoluteFilename } = filenameInfo;
         const ast = getAST(absoluteFilename);
         const dependencies = getDependencies(ast, absoluteFilename);
-
-        console.log(uuidv4());
 
         return {
             ...filenameInfo,
@@ -94,7 +109,9 @@ module.exports = class Compiler {
             mkdirSync(path.dirname(outputPath), { recursive: true });
         }
 
+        // format code
         formatCode(bundle).then((formattedBundle) => {
+            // write dist file to disk
             writeFileSync(outputPath, formattedBundle);
         });
     }
