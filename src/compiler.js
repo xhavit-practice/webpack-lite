@@ -87,7 +87,7 @@ module.exports = class Compiler {
         const modulesStr = this.modules.reduce((acc, m, i) => {
             const isFinal = i === this.modules.length - 1;
             const newAcc = `${acc}
-                /*${m.filename}*/
+                /* ${m.filename} */
                 '${m.id}': function(require, module, exports) {${m.source}}`;
             return isFinal ? `{${newAcc}}` : `${newAcc},`;
         }, '');
