@@ -8,26 +8,26 @@
         return module.exports;
     }
 
-    require('43feaff4-5b20-4734-ba4f-629f8a214b9a');
+    require('be3e3347-53e4-41d4-b936-d7b9e727ba71');
 })({
-    /*./example/index.js*/
-    '43feaff4-5b20-4734-ba4f-629f8a214b9a': function (
+    /* ./example/index.js */
+    'be3e3347-53e4-41d4-b936-d7b9e727ba71': function (
         require,
         module,
         exports
     ) {
         'use strict';
 
-        var _c146d494d040de8676B1ecaa173d = _interopRequireDefault(
-            require('48c146d4-94d0-40de-8676-b1ecaa173d19')
+        var _fa269353B8cf44baA51fD9d5292b = _interopRequireDefault(
+            require('fa269353-b8cf-44ba-a51f-d9d5292b6884')
         );
 
-        var _f999188837964a458c1bC6a3e06c2c4e = _interopRequireDefault(
-            require('f9991888-3796-4a45-8c1b-c6a3e06c2c4e')
+        var _ce9fF29845b4Be6cF5fc61c0a4be = _interopRequireDefault(
+            require('4819ce9f-f298-45b4-be6c-f5fc61c0a4be')
         );
 
-        var _b0f5dea8ea04db4A920Bd7809b582fa = _interopRequireDefault(
-            require('0b0f5dea-8ea0-4db4-a920-bd7809b582fa')
+        var _b3ee5b03052d42de9f9b9b92f1eb24ba = _interopRequireDefault(
+            require('b3ee5b03-052d-42de-9f9b-9b92f1eb24ba')
         );
 
         function _interopRequireDefault(obj) {
@@ -35,17 +35,17 @@
         }
 
         console.log(
-            (0, _c146d494d040de8676B1ecaa173d['default'])('webpack-lite')
+            (0, _fa269353B8cf44baA51fD9d5292b['default'])('webpack-lite')
         );
         console.log(
-            (0, _f999188837964a458c1bC6a3e06c2c4e['default'])('webpack-lite')
+            (0, _ce9fF29845b4Be6cF5fc61c0a4be['default'])('webpack-lite')
         );
         console.log(
-            (0, _b0f5dea8ea04db4A920Bd7809b582fa['default'])('webpack-lite')
+            (0, _b3ee5b03052d42de9f9b9b92f1eb24ba['default'])('webpack-lite')
         );
     },
-    /*./a.js*/
-    '48c146d4-94d0-40de-8676-b1ecaa173d19': function (
+    /* ./a.js */
+    'fa269353-b8cf-44ba-a51f-d9d5292b6884': function (
         require,
         module,
         exports
@@ -57,12 +57,12 @@
         });
         exports['default'] = a;
 
-        var _c2d91a3e26c6473aB80bCfca9e8b4cb = _interopRequireDefault(
-            require('c2d91a3e-26c6-473a-b80b-cfca9e8b4cb1')
+        var _e37d8c86Db114d1382deD01fdf159df = _interopRequireDefault(
+            require('e37d8c86-db11-4d13-82de-d01fdf159df1')
         );
 
-        var _a68784e98f94196A9b75bbf9d05a0ce = _interopRequireDefault(
-            require('4a68784e-98f9-4196-a9b7-5bbf9d05a0ce')
+        var _ca19eD70e43558543194f7cc = _interopRequireDefault(
+            require('164ca19e-d70e-4355-8543-194f7cc75965')
         );
 
         function _interopRequireDefault(obj) {
@@ -72,17 +72,17 @@
         function a(name) {
             return ''
                 .concat(
-                    (0, _c2d91a3e26c6473aB80bCfca9e8b4cb['default'])(name),
+                    (0, _e37d8c86Db114d1382deD01fdf159df['default'])(name),
                     ' '
                 )
                 .concat(
-                    (0, _a68784e98f94196A9b75bbf9d05a0ce['default'])(name),
+                    (0, _ca19eD70e43558543194f7cc['default'])(name),
                     ' - a'
                 );
         }
     },
-    /*./b.js*/
-    'c2d91a3e-26c6-473a-b80b-cfca9e8b4cb1': function (
+    /* ./b.js */
+    'e37d8c86-db11-4d13-82de-d01fdf159df1': function (
         require,
         module,
         exports
@@ -98,8 +98,8 @@
             return ''.concat(name, ' - b');
         }
     },
-    /*./d.js*/
-    '4a68784e-98f9-4196-a9b7-5bbf9d05a0ce': function (
+    /* ./d.js */
+    '164ca19e-d70e-4355-8543-194f7cc75965': function (
         require,
         module,
         exports
@@ -115,8 +115,8 @@
             return ''.concat(name, ' - d');
         }
     },
-    /*./c.js*/
-    'f9991888-3796-4a45-8c1b-c6a3e06c2c4e': function (
+    /* ./c.js */
+    '4819ce9f-f298-45b4-be6c-f5fc61c0a4be': function (
         require,
         module,
         exports
@@ -132,8 +132,8 @@
             return ''.concat(name, ' - c');
         }
     },
-    /*./e.js*/
-    '0b0f5dea-8ea0-4db4-a920-bd7809b582fa': function (
+    /* ./e.js */
+    'b3ee5b03-052d-42de-9f9b-9b92f1eb24ba': function (
         require,
         module,
         exports
